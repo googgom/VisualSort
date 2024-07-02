@@ -6,6 +6,11 @@ public class Visual {
     private static String currentMode = "Merge";
     private static Boolean restartAsked = true;
 
+    private static void sortCall( ){
+
+    }
+
+
     public static void Start( ){
         JFrame frame = new JFrame("VisualSort"); // Для окна нужна "рама" - Frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
