@@ -23,10 +23,30 @@ public class Insertion {
 
     public int[] sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
+            Stats_12.add("Step-" + Stats_12.size() / 1 + " First Position selected: " + i + " ");
+            int [] temp8 = new int[array.length];
+            for( int j = 0; j < temp8.length; ++ j ) temp8[j] = array[j];
+            Arrays_12.add(temp8);
             for (int j = i; j > 0; --j) {
+                Stats_12.add("Step-" + Stats_12.size() / 1 + " Second Position selected: " + j + " ");
+                int [] temp9 = new int[array.length];
+                for( int k = 0; k < temp9.length; ++ k ) temp9[k] = array[k];
+                Arrays_12.add(temp9);
                 if (array[j] < array[j-1]) {
+                    Stats_12.add("Step-" + Stats_12.size() / 1 + " Swapping: A[" + i + "] = " + array[i] + " with: A[" + j + "] = " + array[j]);
+                    int [] temp10 = new int[array.length];
+                    for( int k = 0; k < temp10.length; ++ k ) temp10[k] = array[k];
+                    Arrays_12.add(temp10);
                     swap(array, j, j-1);
+                    Stats_12.add("Step-" + Stats_12.size() / 1 + " Swapped: A[" + i + "] = " + array[i] + " with: A[" + j + "] = " + array[j]);
+                    int [] temp11 = new int[array.length];
+                    for( int k = 0; k < temp11.length; ++ k ) temp11[k] = array[k];
+                    Arrays_12.add(temp11);
                 } else {
+                    Stats_12.add("Step-" + Stats_12.size() / 1 + " Stop: no reason to keep current First Position");
+                    int [] temp10 = new int[array.length];
+                    for( int k = 0; k < temp10.length; ++ k ) temp10[k] = array[k];
+                    Arrays_12.add(temp10);
                     break;
                 }
             }
